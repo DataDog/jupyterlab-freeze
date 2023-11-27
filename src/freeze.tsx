@@ -1,3 +1,8 @@
+/* 
+  Unless explicitly stated otherwise all files in this repository are licensed under the BSD 3-Clause License.
+  This product includes software developed at Datadog (https://www.datadoghq.com/) Copyright 2023 Datadog, Inc.
+*/
+
 import { ISessionContext } from '@jupyterlab/apputils';
 import { Cell, CodeCell, ICellModel } from '@jupyterlab/cells';
 import { NotebookPanel } from '@jupyterlab/notebook';
