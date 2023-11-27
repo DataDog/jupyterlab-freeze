@@ -3,15 +3,33 @@ import {
   JupyterFrontEndPlugin
 } from '@jupyterlab/application';
 
+import { INotebookTracker } from '@jupyterlab/notebook';
+import { NotebookPanel } from '@jupyterlab/notebook';
+import { FreezeWidget } from './freeze';
+
 /**
- * Initialization data for the jupyterlab_freeze extension.
+ * Initialization data for the jupyterlab-freeze extension.
  */
 const plugin: JupyterFrontEndPlugin<void> = {
-  id: 'jupyterlab_freeze:plugin',
-  description: 'Jupyter freeze extension for jupyterlab!',
+  id: 'jupyterlab-freeze:plugin',
+  description: 'Jupyterlab version of freeze extension',
   autoStart: true,
-  activate: (app: JupyterFrontEnd) => {
-    console.log('JupyterLab extension jupyterlab_freeze is activated!');
+  requires: [INotebookTracker],
+  activate: (app: JupyterFrontEnd, notebookTracker: INotebookTracker) => {
+    console.log('JupyterLab extension jupyterlab-freeze is activated!');
+
+    notebookTracker.widgetAdded.connect((_: any, notebookPanel: NotebookPanel) => {
+      // Retrieve notebook toolbar
+      const notebookToolbar = notebookPanel.toolbar;
+      // Create the widget
+      const freezeWidget = new FreezeWidget(notebookPanel);
+      // Add the widget to the toolbar
+      notebookToolbar.addItem('freeze', freezeWidget);
+
+      notebookPanel.disposed.connect(() => {
+        freezeWidget.dispose();
+      });
+    });
   }
 };
 
