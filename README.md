@@ -1,7 +1,30 @@
 # jupyterlab_freeze
 
-[![Github Actions Status](/workflows/Build/badge.svg)](/actions/workflows/build.yml)
 Jupyter freeze extension for jupyterlab!
+
+![](/images/example.gif)
+
+This extension is based on the freeze extension by [jupyter_contrib_nbextensions](https://github.com/ipython-contrib/jupyter_contrib_nbextensions/tree/master/src/jupyter_contrib_nbextensions/nbextensions/freeze).
+
+This repository brings the extension to jupyterlab.
+
+This extension allows to make cells read-only or frozen. It provides three buttons:
+* unlock
+* read-only
+* frozen
+
+
+For **code-cells**:
+- _read-only_:  it can be executed, but its input cannot be changed.
+- _frozen_: It cannot be either altered or executed.
+
+For **markdown-cells**:
+- _read-only_ / _frozen_: It's input can be viewed by double-clicking on it, but cannot be changed.
+
+To change the state of a selected cell, press the corresponding button.
+
+The individual cell's state is stored in its metadata and is applied to the cell if the extension is loaded.
+
 
 ## Requirements
 
