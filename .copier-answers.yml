@@ -1,0 +1,19 @@
+# Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
+_commit: v4.2.4
+_src_path: https://github.com/jupyterlab/extension-template
+author_email: carlos.dominguez@datadoghq.com
+author_name: Carlos Dominguez Becerril
+data_format: string
+file_extension: ''
+has_binder: false
+has_settings: false
+kind: frontend
+labextension_name: jupyterlab_freeze
+mimetype: ''
+mimetype_name: ''
+project_short_description: Jupyter freeze extension for jupyterlab!
+python_name: jupyterlab_freeze
+repository: ''
+test: true
+viewer_name: ''
+
