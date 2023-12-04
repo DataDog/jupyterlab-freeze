@@ -1,0 +1,45 @@
+Component,Origin,License,Copyright
+@jupyterlab/application,npm,BSD-3-Clause,Copyright (c) 2015-2022 Project Jupyter Contributors
+@jupyterlab/builder,npm,BSD-3-Clause,Copyright (c) 2015-2022 Project Jupyter Contributors
+@jupyterlab/cells,npm,BSD-3-Clause,Copyright (c) 2015-2022 Project Jupyter Contributors
+@jupyterlab/notebook,npm,BSD-3-Clause,Copyright (c) 2015-2022 Project Jupyter Contributors
+@jupyterlab/testutils,npm,BSD-3-Clause,Copyright (c) 2015-2022 Project Jupyter Contributors
+@npmcli/agent,npm,ISC,"Copyright (c) npm, Inc. and Contributors All rights reserved."
+@npmcli/fs,npm,ISC,"Copyright (c) npm, Inc. and Contributors All rights reserved."
+@types/jest,npm,MIT,Copyright (c) Microsoft Corporation.
+@types/json-schema,npm,MIT,Copyright (c) Microsoft Corporation.
+@types/react,npm,MIT,Copyright (c) Microsoft Corporation.
+@types/react-addons-linked-state-mixin,npm,MIT,Copyright (c) Microsoft Corporation.
+@typescript-eslint/eslint-plugin,npm,MIT,Copyright (c) 2019 typescript-eslint and other contributors
+@typescript-eslint/parser,npm,BSD-2-Clause,"Copyright JS Foundation and other contributors, https://js.foundation"
+abbrev,npm,ISC,Copyright (c) Isaac Z. Schlueter and Contributors
+aggregate-error,npm,MIT,Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
+cacache,npm,ISC,"Copyright (c) npm, Inc. and Contributors All rights reserved."
+css-loader,npm,MIT,Copyright JS Foundation and other contributors
+encoding,npm,MIT,Copyright (c) 2012-2014 Andris Reinman
+env-paths,npm,MIT,Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
+err-code,npm,MIT,Copyright (c)
+eslint,npm,MIT,"Copyright OpenJS Foundation and other contributors, <www.openjsf.org>"
+eslint-config-prettier,npm,MIT,"Copyright (c) 2017, 2018, 2019, 2020, 2021, 2022, 2023 Simon Lydell and contributors"
+eslint-plugin-prettier,npm,MIT,Copyright © 2017 Andres Suarez and Teddy Katz
+exponential-backoff,npm,Apache-2.0,Copyright 2019 Coveo Solutions Inc.
+http-cache-semantics,npm,BSD-2-Clause,Copyright 2016-2018 Kornel Lesiński
+is-lambda,npm,MIT,Copyright (c) 2016-2017 Thomas Watson Steen
+jest,npm,MIT,"Copyright (c) Meta Platforms, Inc. and affiliates."
+jupyterlab_freeze,npm,BSD-3-Clause,"Copyright (c) 2023, Datadog, Inc."
+make-fetch-happen,npm,ISC,"Copyright 2017-2022 (c) npm, Inc."
+node-gyp,npm,MIT,Copyright (c) 2012 Nathan Rajlich <nathan@tootallnate.net>
+npm-run-all,npm,MIT,Copyright (c) 2015 Toru Nagashima
+prettier,npm,MIT,Copyright © James Long and contributors
+react,npm,MIT,"Copyright (c) Facebook, Inc. and its affiliates."
+react-icons,npm,MIT,Copyright 2018 kamijin_fanta <kamijin@live.jp>
+rimraf,npm,ISC,Copyright (c) 2011-2023 Isaac Z. Schlueter and Contributors
+source-map-loader,npm,MIT,Copyright JS Foundation and other contributors
+style-loader,npm,MIT,Copyright JS Foundation and other contributors
+stylelint,npm,MIT,"Copyright (c) 2015 - present Maxime Thirouin, David Clark & Richard Hallows"
+stylelint-config-recommended,npm,MIT,Copyright (c) 2018 - present stylelint
+stylelint-config-standard,npm,MIT,Copyright (c) 2015 - present stylelint authors
+stylelint-csstree-validator,npm,MIT,Copyright (C) 2016-2021 by Roman Dvornov
+stylelint-prettier,npm,MIT,Copyright © 2018 Ben Scott
+typescript,npm,Apache-2.0,Copyright (c) Microsoft Corporation. All rights reserved.
+yjs,npm,MIT,Copyright (c) 2023
