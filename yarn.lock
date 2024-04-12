@@ -7104,7 +7104,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"json-schema-compare@npm:^0.2.2":
+"json-schema-compare@npm:0.2.2":
   version: 0.2.2
   resolution: "json-schema-compare@npm:0.2.2"
   dependencies:
