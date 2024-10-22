@@ -10,11 +10,6 @@
     https://jupyterlab.readthedocs.io/en/stable/developer/css.html
 */
 
-.jp-Cell {
-    --jp-frozen-bg: #71b8e7;
-    --jp-readonly-bg: #ffec8a;
-}
-
 .jp-Notebook .jp-Cell.jp-mod-frozen {
     position: relative;
 }
@@ -30,7 +25,7 @@
     position: absolute;
     inset: 0;
     opacity: 0.5;
-    background: var(--jp-frozen-bg);
+    background: var(--jp-freeze-frozen-bg);
 }
 
 .jp-Notebook .jp-Cell.jp-mod-frozen-readonly:before {
@@ -41,5 +36,5 @@
     position: absolute;
     inset: 0;
     opacity: 0.5;
-    background: var(--jp-readonly-bg);
+    background: var(--jp-freeze-readonly-bg);
 }

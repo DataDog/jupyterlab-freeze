@@ -1,0 +1,20 @@
+{
+  "title": "Jupyterlab Freeze Extension",
+  "description": "Settings of the Jupyterlab version of freeze extension.",
+  "properties": {
+    "--jp-freeze-frozen-bg": {
+      "type": "string",
+      "title": "Frozen bg-color",
+      "description": "The background color of a frozen cell.",
+      "default": "#71b8e7"
+    },
+    "--jp-freeze-readonly-bg": {
+      "type": "string",
+      "title": "Readonly bg-color",
+      "description": "The background color of a locked/readonly cell.",
+      "default": "#ffec8a"
+    }
+  },
+  "additionalProperties": false,
+  "type": "object"
+}
