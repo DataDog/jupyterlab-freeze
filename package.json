@@ -101,6 +101,7 @@
     },
     "jupyterlab": {
         "extension": true,
+        "schemaDir": "schema",
         "outputDir": "jupyterlab_freeze/labextension"
     },
     "eslintIgnore": [

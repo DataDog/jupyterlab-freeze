@@ -22,8 +22,8 @@ function getState(cell: Cell): CellState {
    * @returns The state of the cell.
    */
 
-  if (!isSupportedCellType(cell)){
-    return 'normal'
+  if (!isSupportedCellType(cell)) {
+    return 'normal';
   }
 
   if (cell.model.getMetadata('frozen') === true) {
@@ -98,11 +98,10 @@ const FreezeComponent = (props: {
      * @param state - The state to set the selected cell to.
      */
     let notebook = props.notebook.content;
-    let currentCell = notebook.widgets[notebook.activeCellIndex];
-    if (currentCell) {
-      updateMetadata(state, currentCell);
-      props.notebook.update();
-    }
+    notebook.selectedCells.forEach(cell => {
+      updateMetadata(state, cell);
+    });
+    props.notebook.update();
   }
 
   return (
