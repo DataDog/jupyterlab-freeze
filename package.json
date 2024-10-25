@@ -1,6 +1,6 @@
 {
     "name": "jupyterlab_freeze",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "Jupyter freeze extension for jupyterlab!",
     "keywords": [
         "jupyter",
