@@ -16,5 +16,17 @@
     }
   },
   "additionalProperties": false,
-  "type": "object"
+  "type": "object",
+  "jupyter.lab.shortcuts": [
+    {
+      "command": "notebook:toggle-cell-freeze",
+      "keys": ["Accel E"],
+      "selector": ".jp-Notebook"
+    },
+    {
+      "command": "notebook:toggle-cell-read-only",
+      "keys": ["Accel G"],
+      "selector": ".jp-Notebook"
+    }
+  ]
 }

@@ -79,6 +79,17 @@ function updateMetadata(state: CellState, cell: Cell<ICellModel>) {
   cell.update();
 }
 
+export function changeState(state: CellState, notebookPanel: NotebookPanel) {
+  const notebook = notebookPanel.content;
+  notebook.selectedCells.forEach(currentCell => {
+    const currentState = getState(currentCell);
+    const newState: CellState = currentState === state ? 'normal' : state;
+    updateMetadata(newState, currentCell);
+  });
+  notebookPanel.update();
+}
+
+
 const FreezeComponent = (props: {
   // Taking a NotebookPanel rather than an INotebookTracker here simplifies the necessary state management
   // since we're always operating in the context of this particular notebook
@@ -91,19 +102,6 @@ const FreezeComponent = (props: {
    * @returns The rendered JSX element.
    */
 
-  function buttonCallback(state: CellState) {
-    /**
-     * Callback function for button clicks in the current cell
-     *
-     * @param state - The state to set the selected cell to.
-     */
-    let notebook = props.notebook.content;
-    notebook.selectedCells.forEach(cell => {
-      updateMetadata(state, cell);
-    });
-    props.notebook.update();
-  }
-
   return (
     <>
       <div title="Lift restrictions from selected cells">
@@ -111,7 +109,7 @@ const FreezeComponent = (props: {
           className="jp-ToolbarButtonComponent jp-mod-minimal jp-Button"
           aria-pressed="false"
           aria-disabled="false"
-          onClick={() => buttonCallback('normal')}
+          onClick={() => changeState('normal', props.notebook)}
         >
           <FaLockOpen />
         </button>
@@ -121,7 +119,7 @@ const FreezeComponent = (props: {
           className="jp-ToolbarButtonComponent jp-mod-minimal jp-Button"
           aria-pressed="false"
           aria-disabled="false"
-          onClick={() => buttonCallback('read_only')}
+          onClick={() => changeState('read_only', props.notebook)}
         >
           <FaLock />
         </button>
@@ -131,7 +129,7 @@ const FreezeComponent = (props: {
           className="jp-ToolbarButtonComponent jp-mod-minimal jp-Button"
           aria-pressed="false"
           aria-disabled="false"
-          onClick={() => buttonCallback('frozen')}
+          onClick={() => changeState('frozen', props.notebook)}
         >
           <FaAsterisk />
         </button>
