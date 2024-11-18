@@ -81,13 +81,12 @@ function updateMetadata(state: CellState, cell: Cell<ICellModel>) {
 
 export function changeState(state: CellState, notebookPanel: NotebookPanel) {
   const notebook = notebookPanel.content;
-  const currentCell = notebook.widgets[notebook.activeCellIndex];
-  if (currentCell) {
+  notebook.selectedCells.forEach(currentCell => {
     const currentState = getState(currentCell);
     const newState: CellState = currentState === state ? 'normal' : state;
     updateMetadata(newState, currentCell);
-    notebookPanel.update();
-  }
+  });
+  notebookPanel.update();
 }
 
 
