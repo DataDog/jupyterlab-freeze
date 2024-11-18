@@ -11,7 +11,7 @@ import {
 import { ISettingRegistry } from '@jupyterlab/settingregistry';
 import { INotebookTracker } from '@jupyterlab/notebook';
 import { NotebookPanel } from '@jupyterlab/notebook';
-import { FreezeWidget } from './freeze';
+import { FreezeWidget, changeState } from './freeze';
 
 const PLUGIN_ID = 'jupyterlab_freeze:plugin';
 const FREEZE_KEY = '--jp-freeze-frozen-bg';
@@ -72,6 +72,30 @@ const plugin: JupyterFrontEndPlugin<void> = {
         });
       }
     );
+
+    // Add command for freezing/unfreezing cells for keyboard shortcut
+    app.commands.addCommand('notebook:toggle-cell-freeze', {
+      label: 'Freeze/Unfreeze Cell',
+      execute: () => {
+        const notebookPanel = notebookTracker.currentWidget;
+        if (notebookPanel) {
+          changeState('frozen', notebookPanel);
+        }
+      },
+      isEnabled: () => !!notebookTracker.currentWidget
+    });
+
+    // Add command for setting cells to read-only for keyboard shortcut
+    app.commands.addCommand('notebook:toggle-cell-read-only', {
+      label: 'Set Cell to Read-Only or Back to Editable',
+      execute: () => {
+        const notebookPanel = notebookTracker.currentWidget;
+        if (notebookPanel) {
+          changeState('read_only', notebookPanel);
+        }
+      },
+      isEnabled: () => !!notebookTracker.currentWidget
+    });
   }
 };
 
