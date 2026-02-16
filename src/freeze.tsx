@@ -38,7 +38,7 @@ function getState(cell: Cell): CellState {
 }
 
 function isSupportedCellType(cell: Cell<ICellModel>): boolean {
-  return cell.model.type == 'code' || cell.model.type == 'markdown';
+  return cell.model.type === 'code' || cell.model.type === 'markdown';
 }
 
 function updateMetadata(state: CellState, cell: Cell<ICellModel>) {
@@ -51,7 +51,9 @@ function updateMetadata(state: CellState, cell: Cell<ICellModel>) {
    */
 
   // If the cell is not code or markdown, ignore it
-  if (!isSupportedCellType(cell)) return;
+  if (!isSupportedCellType(cell)) {
+    return;
+  }
 
   switch (state) {
     case 'normal':
@@ -88,7 +90,6 @@ export function changeState(state: CellState, notebookPanel: NotebookPanel) {
   });
   notebookPanel.update();
 }
-
 
 const FreezeComponent = (props: {
   // Taking a NotebookPanel rather than an INotebookTracker here simplifies the necessary state management
@@ -154,12 +155,12 @@ export class FreezeWidget extends ReactWidget {
     super();
     this.notebook = notebook;
     this.notebook.context.ready.then(() => {
-      let content = this.notebook.content;
+      const content = this.notebook.content;
       const length: number = content.model?.cells.length || 0;
       // Loop through each cell in the notebook
-      for (var i = 0; i < length; i++) {
-        let cell = content.widgets[i];
-        let state = getState(cell);
+      for (let i = 0; i < length; i++) {
+        const cell = content.widgets[i];
+        const state = getState(cell);
         updateMetadata(state, cell);
       }
       this.notebook.update();
