@@ -71,7 +71,7 @@
         "@typescript-eslint/eslint-plugin": "^8.56.1",
         "@typescript-eslint/parser": "^8.56.1",
         "css-loader": "^7.1.4",
-        "eslint": "^8.57.1",
+        "eslint": "^10.1.0",
         "eslint-config-prettier": "^10.1.8",
         "eslint-plugin-prettier": "^5.5.5",
         "jest": "^30.2.0",
