@@ -196,6 +196,9 @@
     }
   },
   "resolutions": {
-    "json-schema-compare": "0.2.2"
+    "json-schema-compare": "0.2.2",
+    "js-yaml": "^4.2.0",
+    "brace-expansion": "^5.0.6",
+    "uuid": "^11.1.1"
   }
 }
