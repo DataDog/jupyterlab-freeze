@@ -198,7 +198,15 @@
   "resolutions": {
     "json-schema-compare": "0.2.2",
     "js-yaml": "^4.3.0",
-    "brace-expansion": "^5.0.7",
-    "uuid": "^11.1.1"
+    "brace-expansion": "^5.0.9",
+    "uuid": "^11.1.1",
+    "sanitize-html@npm:~2.12.1": "npm:^2.17.6",
+    "dompurify@npm:^3.3.3": "npm:^3.4.12",
+    "fast-uri@npm:^3.0.1": "npm:^3.1.5",
+    "postcss@npm:^8.3.11": "npm:^8.5.25",
+    "postcss@npm:^8.4.33": "npm:^8.5.25",
+    "postcss@npm:^8.4.40": "npm:^8.5.25",
+    "postcss@npm:^8.5.9": "npm:^8.5.25",
+    "tar@npm:^7.5.4": "npm:^7.5.22"
   }
 }
